@@ -1,1 +1,1 @@
-web: gunicorn chatapp.wsg --logo-file -
+web: gunicorn chatapp.wsgi --logo-file -
