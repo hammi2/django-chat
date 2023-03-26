@@ -1,5 +1,5 @@
 from itertools import chain
-
+from django.views.decorators.csrf import csrf_protect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.db.models import Q
@@ -31,7 +31,7 @@ class HomePageView(View):
         context = {"usr":usr, "all_usr":all_usr, "user_profile":usr_p, "all_rooms":all_rooms}
         return render(request,"index.html", context)
 
-
+@csrf_protect
 class LoginView(View):
 
     Model = User
