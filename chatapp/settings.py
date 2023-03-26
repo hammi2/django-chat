@@ -62,6 +62,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+CSRF_TRUSTED_ORIGINS = [
+    ' https://django-chat-production.up.railway.app',
+    ' https://django-chat-production.up.railway.app/login',
+]
 
 ROOT_URLCONF = 'chatapp.urls'
 
@@ -112,7 +116,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-CSRF_TRUSTED_ORIGINS = ['django-chat-production.up.railway.app']
+
 
 
 # Internationalization
