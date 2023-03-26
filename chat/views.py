@@ -1,5 +1,5 @@
 from itertools import chain
-from django.views.decorators.csrf import requires_csrf_token
+from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.db.models import Q
@@ -40,7 +40,7 @@ class LoginView(View):
 
     Model = User
     template_name = "index.html"
-    @requires_csrf_token     
+    @csrf_exempt     
     def get(self, request, *args, **kwargs):
         return render(request,"login.html")
     def post(self,request, *args, **kwargs):
