@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-in</title>
-	{% csrf_token %}
+	
 </head>
 
 <style>
@@ -294,6 +294,7 @@ footer a {
         <div class="form-container sign-up-container">
             <form action="">
                 <h1>Create Account</h1>
+		    {% csrf_token %}
                 <!-- <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
