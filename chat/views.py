@@ -36,12 +36,11 @@ class HomePageView(View):
 
 
 
-@requires_csrf_token     
 class LoginView(View):
 
     Model = User
     template_name = "index.html"
-
+    @requires_csrf_token     
     def get(self, request, *args, **kwargs):
         return render(request,"login.html")
     def post(self,request, *args, **kwargs):
