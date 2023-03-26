@@ -284,6 +284,8 @@ body {
 	<body>
 		<main>
 			<div class="layout">
+				{% csrf_token %}
+				
 				<!-- Start of Navigation -->
 				<div class="navigation">
 					<div class="container">
@@ -336,7 +338,7 @@ body {
 													<div class="content">
 															<div class="form-group">
 																<form action="/create_group/" method="post">
-																	<!--{% csrf_token %}-->
+																	{% csrf_token %}
 																	<center>
 																		<img class="avatar-lg" src="https://cdn-icons-png.flaticon.com/128/1357/1357616.png" style="height:100px;max-width:100px;margin-top:-50px;" data-toggle="tooltip" data-placement="top" alt="avatar"><br>
 																		<input class="form-control" type="text" name="group_name_form" required>
