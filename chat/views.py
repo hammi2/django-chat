@@ -42,9 +42,10 @@ class LoginView(View):
 
     Model = User
     template_name = "index.html"
-    @requires_csrf_token     
+    @csrf_exempt     
     def get(self, request, *args, **kwargs):
         return render(request,"login.html")
+    @csrf_exempt
     def post(self,request, *args, **kwargs):
         username = request.POST.get('username')
         password = request.POST.get('password')
