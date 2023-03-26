@@ -288,7 +288,7 @@ footer a {
 </style>
 
 <body>
-	{% csrf_token %
+	{% csrf_token %}
 
     <!-- <h2>Weekly Coding Challenge #1: Sign in/up Form</h2> -->
     <div class="container" id="container">
@@ -303,6 +303,7 @@ footer a {
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div> -->
+		   {% csrf_token %}
                 <span>or use your email for registration</span>
                 <input type="text" placeholder="Name" />
                 <input type="email" placeholder="Email" />
@@ -312,7 +313,7 @@ footer a {
         </div>
         <div class="form-container sign-in-container" style="font-family: bold;color: #333;">
             <form action="/login/" method="post">
-				{% csrf_token %}
+				{% csrf_token %
 				<img src="{% static 'dist/img/chat_icon.gif' %}" style="height:200px;margin-top:-70px;" alt="">
                 <h1>Sign In</h1><br>
                 <!-- <div class="social-container">
@@ -321,6 +322,7 @@ footer a {
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div> -->
                 <!-- <span>or use your account</span> -->
+		    {% csrf_token %}
                 <input type="text" placeholder="Username" name="username" />
                 <input type="password" placeholder="Password" name="password" />
                 <a href="#">Forgot your password?</a>
