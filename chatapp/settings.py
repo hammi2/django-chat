@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     "*",
     "https://django-chat-production.up.railway.app",
 ]
+CSRF_TRUSTED_ORIGINS = ['*' ,'https://djco.gamalz.repl.co',"https://django-chat-production.up.railway.app",]
 
 
 # Application definition
